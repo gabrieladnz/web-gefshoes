@@ -1,0 +1,363 @@
+<app-navbar></app-navbar>
+<section class="element__product-screen">
+    <div class="container">
+    <main>
+        <div class="informacoes-left">
+        <span class="tipo-tenis">Masculino</span>
+        <h1 class="title">
+            <span class="title-name">
+                Tênis GEF Ultra One
+            </span>
+            <span class="title-overlay"></span>
+        </h1>
+        <p class="descricao">
+            O Ultra One redefine os padrões de estilo e desempenho, elevando sua experiência calçadista a novos patamares. Desenvolvido com a fusão perfeita de inovação e design arrojado, este calçado é mais do que apenas um item de moda, é uma declaração de ousadia e excelẽncia.
+        </p>
+        </div>  
+        <div class="imagem-central">
+            <div>
+                <img *ngIf="mostrarPrimeiraImagem" class="imagem-produto" src="../../../assets/shoes/tenis-tela-produto-1.png" alt="Tênis GEF ULTRA ONE, um tênis Preto e branco e na parte de trás contém azul, amarleo e rosa">
+                <img *ngIf="!mostrarPrimeiraImagem" [src]="segundaImagemUrl" alt="Imagem 2">
+                <div class="sombreamento-imagem"></div>
+            </div>
+
+            <div class="cores">
+                <ul>
+                    <li class="cor cor-ativa" (click)="trocarimagem()"></li>
+                    <li class="cor" (click)="trocarimagem()"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="opcoes">
+            <h4 class="tamanho-title">Tamanhos</h4>
+            <ul class="tamanhos-botoes">
+                <li>36</li>
+                <li>38</li>
+                <li>40</li>
+                <li class="tamanho-ativo">41</li>
+                <li>43</li>
+            </ul>
+
+            <div class="reviews">
+                <h4>Avaliações</h4>
+                <h4 class="avaliacoes-quantidade">(43)</h4>
+                    <ul class="estrelas-avaliacoes">
+                        <li>
+                            <img src="../../../assets/icons/star.png" alt="">
+                        </li>
+                    
+                        <li>
+                            <img src="../../../assets/icons/star.png" alt="">
+                        </li>
+
+                        <li>
+                            <img src="../../../assets/icons/star.png" alt="">
+                        </li>
+
+                        <li>
+                            <img src="../../../assets/icons/star.png" alt="">
+                        </li>
+
+                        <li>
+                            <img src="../../../assets/icons/star-half-empty.png" alt="">
+                        </li>
+                    </ul>
+            </div>
+        
+
+            <div class="valor-produto">
+                <h4>Preço</h4>
+                <h4 class="preco">R$249,90</h4>
+            </div>
+            
+
+            <div class="opcoes-botoes">
+                <button>ADICIONAR AO CARRINHO</button>
+                <div (click)="trocarCoracao()">
+                    <img *ngIf="mostrarImagemCoracao" class="hearth-image" src="../../../assets/icons/hearth.png" alt="">
+                    <img *ngIf="!mostrarImagemCoracao" [src]="segundaImagemCoracao" class="coracao-completo" alt="Imagem 2">
+                </div>
+            </div>
+        
+    </div>  
+    </main>
+
+    <div class="avaliacao">
+        <h3>Avaliações</h3>
+        <h3 class="avaliacoes-quantidade">(43)</h3>
+        <div class="separar"></div>
+        <h2>4.7</h2>
+        <ul class="estrelas-avaliacoes">
+            <li>
+                <img src="../../../assets/icons/star.png" alt="">
+            </li>
+        
+            <li>
+                <img src="../../../assets/icons/star.png" alt="">
+            </li>
+
+            <li>
+                <img src="../../../assets/icons/star.png" alt="">
+            </li>
+
+            <li>
+                <img src="../../../assets/icons/star.png" alt="">
+            </li>
+
+            <li>
+                <img src="../../../assets/icons/star-half-empty.png" alt="">
+            </li>
+        </ul>
+
+    </div>
+    <div class="linha-centro"></div>
+
+    <div class="qualidade-produto">
+        <div>
+            <button class="comentario">ESCREVER UM COMENTÁRIO</button>
+        </div>
+
+        <div class="qualidades">
+            <div class="qualidades-superior">
+                <h3>Conforto</h3>
+                    <div class="retangulo-avaliacao conforto">
+                        <div class="parte"></div>
+                        <span class="pessimo">Péssimo</span>
+                        <div class="parte"></div>
+                        <div class="parte"></div>
+                        <div class="parte"></div>
+                        <div class="parte"></div>
+                        <span class="excelente">Excelente</span>
+                    </div>
+
+                <h3>Qualidade</h3>
+                <div class="retangulo-avaliacao qualidade">
+                    <div class="parte"></div>
+                    <span class="pessimo">Péssimo</span>
+                    <div class="parte"></div>
+                    <div class="parte"></div>
+                    <div class="parte"></div>
+                    <div class="parte"></div>
+                    <span class="excelente">Excelente</span>
+                </div>
+            </div>
+
+            <div class="qualidades-inferior">
+                <h3>Tamanho</h3>
+                <div class="retangulo-avaliacao tamanho">
+                    <div class="parte"></div>
+                    <span class="muito-pequeno">Muito Pequeno</span>
+                    <div class="parte"></div>
+                    <div class="parte"></div>
+                    <span class="perfeito">Perfeito</span>
+                    <div class="parte"></div>
+                    <div class="parte"></div>
+                    <span class="muito-grande">Muito Grande</span>
+                </div>
+            </div>
+
+            
+        </div>
+        <div class="linha-centro"></div>
+
+        <div class="ordenar">
+            <h2>Ordenar por</h2>
+            <button>Mais recente <img src="../../../assets/icons/down-arrow-produto.png" alt=""></button>
+        </div>
+
+
+        <div class="linha-centro"></div>
+
+        <div class="secao-comentarios">
+            <div class="comentarios-1">
+                <div class="lado-esquerdo">
+                    <ul class="estrelas-avaliacoes">
+                        <li>
+                            <img src="../../../assets/icons/star-green.png" alt="">
+                        </li>
+                
+                        <li>
+                            <img src="../../../assets/icons/star-green.png" alt="">
+                        </li>
+        
+                        <li>
+                            <img src="../../../assets/icons/star-green.png" alt="">
+                        </li>
+        
+                        <li>
+                            <img src="../../../assets/icons/star-green.png" alt="">
+                        </li>
+        
+                        <li>
+                            <img src="../../../assets/icons/star-green.png" alt="">
+                        </li>
+                    </ul>
+                    <span>Botafogo 🍿</span>
+                </div>
+                <div class="centro">
+                    <span>Excelente</span>
+                    <p>"Comprem que o produto é ótimo"</p>
+                    <p>Recomendaria esse item? <span>Sim</span></p>
+                </div>
+                <div class="lado-direito">
+                    <p>Novembro 29, 2023</p>
+                </div>
+
+            </div>
+
+            <div class="linha-centro"></div>
+
+            <div class="comentarios-1">
+                <div class="lado-esquerdo">
+                    <ul class="estrelas-avaliacoes">
+                        <li>
+                            <img src="../../../assets/icons/star-green.png" alt="">
+                        </li>
+                
+                        <li>
+                            <img src="../../../assets/icons/star-green.png" alt="">
+                        </li>
+        
+                        <li>
+                            <img src="../../../assets/icons/star-green.png" alt="">
+                        </li>
+        
+                        <li>
+                            <img src="../../../assets/icons/star-green.png" alt="">
+                        </li>
+        
+                        <li>
+                            <img src="../../../assets/icons/star-green.png" alt="">
+                        </li>
+                    </ul>
+                    <span>VascoB</span>
+                </div>
+                <div class="centro">
+                    <span>Excelente</span>
+                    <p>"Comprem que o produto é ótimo"</p>
+                    <p>Recomendaria esse item? <span>Sim</span></p>
+                </div>
+                <div class="lado-direito">
+                    <p>Novembro 29, 2023</p>
+                </div>
+
+            </div>
+
+            <div class="linha-centro"></div>
+
+            <div class="comentarios-1">
+                <div class="lado-esquerdo">
+                    <ul class="estrelas-avaliacoes">
+                        <li>
+                            <img src="../../../assets/icons/star-green.png" alt="">
+                        </li>
+                
+                        <li>
+                            <img src="../../../assets/icons/star-green.png" alt="">
+                        </li>
+        
+                        <li>
+                            <img src="../../../assets/icons/star-green.png" alt="">
+                        </li>
+        
+                        <li>
+                            <img src="../../../assets/icons/star-green.png" alt="">
+                        </li>
+        
+                        <li>
+                            <img src="../../../assets/icons/star-green.png" alt="">
+                        </li>
+                    </ul>
+                    <span>Cleiton S.</span>
+                </div>
+                <div class="centro">
+                    <span>Excelente</span>
+                    <p>"Comprem que o produto é ótimo"</p>
+                    <p>Recomendaria esse item? <span>Sim</span></p>
+                </div>
+                <div class="lado-direito">
+                    <p>Novembro 29, 2023</p>
+                </div>
+
+            </div>
+
+            <div class="linha-centro"></div>
+
+            <div class="comentarios-1">
+                <div class="lado-esquerdo">
+                    <ul class="estrelas-avaliacoes">
+                        <li>
+                            <img src="../../../assets/icons/star-green.png" alt="">
+                        </li>
+                
+                        <li>
+                            <img src="../../../assets/icons/star-green.png" alt="">
+                        </li>
+        
+                        <li>
+                            <img src="../../../assets/icons/star-green.png" alt="">
+                        </li>
+        
+                        <li>
+                            <img src="../../../assets/icons/star-green.png" alt="">
+                        </li>
+        
+                        <li>
+                            <img src="../../../assets/icons/star-green.png" alt="">
+                        </li>
+                    </ul>
+                    <span>Júlia Maria</span>
+                </div>
+                <div class="centro">
+                    <span>Excelente</span>
+                    <p>"Comprem que o produto é ótimo"</p>
+                    <p>Recomendaria esse item? <span>Sim</span></p>
+                </div>
+                <div class="lado-direito">
+                    <p>Novembro 29, 2023</p>
+                </div>
+
+            </div>
+
+            <div class="linha-centro"></div>
+        </div>
+
+        <div class="ver-mais">
+            <button>Mais avaliações <img src="../../../assets/icons/down-arrow-produto.png" alt=""></button>
+        </div>
+
+        <div class="linha-centro"></div>
+
+
+        <div class="recomendacao-texto">
+            <h2>Você também pode gostar</h2>
+        </div>
+        <div class="recomendacoes">
+            <div>
+                <img src="../../../assets/shoes/tenis-tela-produto-recomedacoes-1.png" alt="">
+                <p><b>Tênis GEF Ultra SkyLine</b></p>
+                <p>Masculino Skyline</p>
+                <p>R$ 249,90</p>
+            </div>
+
+            <div>
+                <img src="../../../assets/shoes/tenis-tela-produto-recomendacoes-2.png" alt="">
+                <p><b>Tênis GEF Ultra SkyLine</b></p>
+                <p>Masculino Skyline</p>
+                <p>R$ 249,90</p>
+            </div>
+
+            <div>
+                <img src="../../../assets/shoes/tenis-tela-produto-recomendacoes-3.png" alt="">
+                <p><b>Tênis GEF Ultra SkyLine</b></p>
+                <p>Masculino Skyline</p>
+                <p>R$ 249,90</p>
+            </div>
+
+       </div>
+    </div>
+
+    </div>
+    
+</section>
+<app-footer></app-footer>

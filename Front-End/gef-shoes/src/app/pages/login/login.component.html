@@ -1,0 +1,78 @@
+<section class="page__login">
+  <div class="page__login__title">
+    <h1>Bem-vindo(a) de volta</h1>
+    <p>Faça login para aproveitar ofertas exclusivas!</p>
+  </div>
+
+  <div class="page__login__form">
+    <form [formGroup]="loginForm" #content>
+      <!-- E-mail  -->
+      <mat-form-field>
+        <mat-label>E-mail</mat-label>
+        <input
+          id="email"
+          type="email"
+          matInput
+          color="primary"
+          formControlName="email"
+          autocomplete="email"
+          required
+        />
+      </mat-form-field>
+
+      <!-- Senha  -->
+      <mat-form-field>
+        <mat-label>Senha</mat-label>
+        <input
+          id="senha"
+          matInput
+          type="password"
+          #password
+          [type]="hide ? 'password' : 'text'"
+          formControlName="password"
+          autocomplete="on"
+          required
+        />
+        <button
+          class="form__icon__eyes"
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <!-- Checkbox  -->
+      <section class="page__login__checkbox">
+        <mat-checkbox><b>Lembrar de mim</b></mat-checkbox>
+        <button
+          (click)="openModalForgot()"
+          class="page__login__checkbox__button"
+        >
+          <b>Esqueceu sua senha?</b>
+        </button>
+      </section>
+    </form>
+    <!-- Mensagem de erro -->
+    <div *ngIf="errorOccurred" class="page__login__error-message">
+      <p>E-mail ou senha inválidos. Por favor, tente novamente.</p>
+    </div>
+    <button [disabled]="!this.loginForm.valid"
+      class="page__login__button"
+      mat-raised-button
+      type="submit"
+      (click)="login()"
+    >
+      Acessar
+    </button>
+
+    <!-- Botão cadastre-se  -->
+    <div class="page__login__button__register">
+      <p>Não tem uma conta?</p>
+      <button routerLink="/cadastro" target="_blank">Inscreva-se agora!</button>
+    </div>
+  </div>
+</section>

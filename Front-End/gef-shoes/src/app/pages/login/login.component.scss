@@ -1,0 +1,143 @@
+.page__login {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  height: 80%;
+
+  &__title {
+    animation: slide 1.2s linear;
+
+    padding: 50px;
+    text-align: center;
+
+    h1 {
+      font-size: 40px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 0;
+    }
+  }
+
+  &__form {
+    animation: slideToLoad 1s linear;
+    min-width: 500px;
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    // Cores do checkbox forçadas para sobrescrever o tema
+    // Cores do checkbox no estado não selecionado
+    --mdc-checkbox-unselected-icon-color: black;
+    --mdc-checkbox-unselected-pressed-icon-color: black;
+    --mdc-checkbox-unselected-hover-icon-color: black;
+    --mdc-checkbox-unselected-focus-icon-color: black;
+    --mdc-checkbox-unselected-focus-state-layer-color: black;
+    --mdc-checkbox-unselected-hover-state-layer-color: black;
+    --mdc-checkbox-unselected-pressed-state-layer-color: black;
+
+    // Cor do checkmark
+    --mdc-checkbox-selected-checkmark-color: #ffffff;
+
+    // Cores do checkbox no estado selecionado
+    --mdc-checkbox-selected-icon-color: black;
+    --mdc-checkbox-selected-focus-icon-color: black;
+    --mdc-checkbox-selected-pressed-icon-color: black;
+  }
+
+  &__checkbox__button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 15px;
+  }
+
+  &__button {
+    margin-top: 50px;
+    border-radius: 50px;
+    padding: 20px 50px 20px 50px;
+    width: 250px;
+  }
+
+  &__button__register {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+
+    button {
+      margin-left: 5px;
+      background: none;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    button:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  &__error-message {
+    color: red;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+
+}
+
+/* Efeitos */
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideToLoad {
+  0% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsividade */
+@media screen and (max-width: 425px) {
+  .page__login__form {
+    min-width: 90%;
+  }
+
+  .page__login__button {
+    width: 90%;
+  }
+}
+
+// Sobrescevendo cores do Angular Material
+::ng-deep .mat-mdc-raised-button:not(:disabled) {
+  color: #ffffff !important;
+  background-color: #252525 !important;
+}

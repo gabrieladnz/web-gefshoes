@@ -1,0 +1,49 @@
+.validar-token {
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60%;
+    // padding: 20px;
+    justify-content: center;
+    background-color: #ffffff;
+    padding-bottom: 50px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 80px;
+
+    border-radius: 15px;
+    border: 1px solid #dbd8d8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  &__titulo {
+    font-size: 16px;
+  }
+
+  &__input {
+    display: flex;
+
+    button {
+      font-size: 11px;
+      margin-left: 5px;
+    }
+
+    input {
+      height: 30px;
+      border-radius: 4px;
+      border: 1px solid #726e6e;
+    }
+  }
+}
+
+::ng-deep .mat-mdc-raised-button:not(:disabled) {
+  color: #ffffff !important;
+  background-color: #252525 !important;
+}

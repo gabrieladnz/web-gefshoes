@@ -1,0 +1,222 @@
+<app-navbar></app-navbar>
+<section class="element__home">
+  <div class="element__home__welcome">
+    <div class="element__home__text">
+      <h2>Bem-vindo ao mundo dos sonhos GEFShoes!</h2>
+      <p>
+        Descubra o paraíso do calçado no GefShoes, o seu destino definitivo para
+        a moda dos pés! Seja você um entusiasta casual ou um amante fervoroso de
+        tênis, temos algo especial reservado para todos os estilos.
+      </p>
+      <button
+        (click)="scrollToChoose()"
+        class="element__home__button__start"
+        style="color: #ffffff !important; background-color: #252525 !important"
+        mat-raised-button
+      >
+        Vamos começar!
+      </button>
+    </div>
+    <div class="element__home__welcome__img">
+      <img
+        style="width: 100%"
+        src="../../../assets/images/background-casal.jpg"
+        alt="Mulher e homem se exercitando"
+        loading="eager"
+      />
+    </div>
+  </div>
+
+  <div class="element__home__why__choose" id="choose">
+    <h2>Por que escolher a GEFShoes?</h2>
+
+    <div class="element__home__why__choose__categories">
+      <div>
+        <img src="../../../assets/icons/tendencia.png" alt="Ícone de lupa" />
+        <h3>Tendências incriveis</h3>
+        <p>
+          Mantenha-se à frente no jogo da moda com nossa coleção cuidadosamente
+          selecionada de tênis que seguem as últimas tendências.
+        </p>
+      </div>
+
+      <div>
+        <img src="../../../assets/icons/tenis.png" alt="Ícone de um tênis" />
+        <h3>Variedade sem limites</h3>
+        <p>
+          Desde os clássicos atemporais até os lançamentos mais recentes, a
+          GefShoes oferece uma variedade que atende a todos os gostos e
+          ocasiões.
+        </p>
+      </div>
+
+      <div>
+        <img src="../../../assets/icons/ofertas.png" alt="Ìcone de ofertas" />
+        <h3>Ofertas irresistíveis</h3>
+        <p>
+          Porque estilo não deve quebrar o banco! Desfrute de ofertas exclusivas
+          e promoções irresistíveis para que você possa exibir seu estilo sem
+          gastar uma fortuna.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="element__home__offers">
+    <button
+      style="color: #ffffff !important; background-color: #252525 !important"
+      mat-raised-button
+    >
+      Novidades
+    </button>
+    <button
+      style="color: #ffffff !important; background-color: #252525 !important"
+      mat-raised-button
+    >
+      Coleções
+    </button>
+
+    <div class="element__home__offers__items">
+      <div (click)="produto()">
+        
+        <div style="margin-left: auto">
+          <mat-icon>favorite_border</mat-icon>
+        </div>
+
+      
+        <img
+          src="../../../assets/shoes/tenis-1.jpg"
+          loading="eager"
+          alt="Imagem de um tênis"
+          
+        />
+        
+        <p><b>Tênis GEF Ultra SkyLine</b></p>
+        <p>Masculino Skyline</p>
+        <p>R$ 249,90</p>
+      
+      </div>
+      <div (click)="produto()">
+        <div style="margin-left: auto">
+          <mat-icon>favorite_border</mat-icon>
+        </div>
+        <img
+          src="../../../assets/shoes/tenis-22.jpg"
+          loading="eager"
+          alt="Imagem de um tênis"
+        />
+        <p><b>Tênis GEF Premium Originals</b></p>
+        <p>Masculino Originals</p>
+        <p>R$ 229,90</p>
+      </div>
+      <div (click)="produto()">
+        <div style="margin-left: auto">
+          <mat-icon>favorite_border</mat-icon>
+        </div>
+        <img
+          src="../../../assets/shoes/tenis-3.jpeg"
+          loading="eager"
+          alt="Imagem de um tênis"
+        />
+        <p><b>Tênis Warrior Man</b></p>
+        <p>Masculino</p>
+        <p>R$ 159,90</p>
+      </div>
+      <div (click)="produto()">
+        <div style="margin-left: auto">
+          <mat-icon>favorite_border</mat-icon>
+        </div>
+        <img
+          src="../../../assets/shoes/tenis-4.jpeg"
+          loading="eager"
+          alt="Imagem de um tênis"
+        />
+        <p><b>Tênis Garden</b></p>
+        <p>Feminino</p>
+        <p>R$ 189,90</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="element__home__offers__items__black">
+    <div class="element__home__offers__items__black__items-black">
+      <div (click)="produto()">
+        <div style="margin-left: auto">
+          <mat-icon>favorite_border</mat-icon>
+        </div>
+        <img
+          src="../../../assets/shoes/tenis-5.jpg"
+          loading="eager"
+          alt="Imagem de um tênis"
+        />
+        <p><b>Tênis GEF Modern SkyLine</b></p>
+        <p>Masculino Skyline</p>
+        <p>R$ 169,90</p>
+      </div>
+      <div (click)="produto()">
+        <div style="margin-left: auto">
+          <mat-icon>favorite_border</mat-icon>
+        </div>
+        <img
+          src="../../../assets/shoes/salto-6.jpg"
+          loading="eager"
+          alt="Imagem de um tênis"
+        />
+        <p><b>Salto GEF Elegant Queen</b></p>
+        <p>Feminino</p>
+        <p>R$ 199,90</p>
+      </div>
+      <div (click)="produto()">
+        <div style="margin-left: auto">
+          <mat-icon>favorite_border</mat-icon>
+        </div>
+        <img
+          src="../../../assets/shoes/tenis-7.jpeg"
+          loading="eager"
+          alt="Imagem de um tênis"
+        />
+        <p><b>Sapato GEF Glamour</b></p>
+        <p>Feminino</p>
+        <p>R$ 119,90</p>
+      </div>
+      <div (click)="produto()">
+        <div style="margin-left: auto">
+          <mat-icon>favorite_border</mat-icon>
+        </div>
+        <img
+          src="../../../assets/shoes/bota-8.jpg"
+          loading="eager"
+          alt="Imagem de um tênis"
+        />
+        <p><b>Bota GEF Old Man</b></p>
+        <p>Masculino</p>
+        <p>R$ 349,90</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="element__home__things">
+    <div>
+      <img
+        style="width: 410px"
+        src="../../../assets/images/colections/skyline.svg"
+        alt="Imagem coleção Skyline"
+      />
+    </div>
+    <div>
+      <img
+        style="width: 410px"
+        src="../../../assets/images/colections/hype.svg"
+        alt="Imagem coleção Hype"
+      />
+    </div>
+    <div>
+      <img
+        style="width: 410px"
+        src="../../../assets/images/colections/flash.svg"
+        alt="Imagem coleção flash"
+      />
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

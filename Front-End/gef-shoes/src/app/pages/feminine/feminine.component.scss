@@ -1,0 +1,261 @@
+.element__feminine {
+    &__blackfriday {
+      transform: rotate(-0.106deg);
+      flex-shrink: 0;
+      background: #ffffff;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 868px;
+    }
+  
+  &__welcome__img {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+  }
+
+  &__black__square img{
+    height: 92vh;
+    max-height: 100vh;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__welcome__img::after {
+    content: "";
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    align-items: center;
+    background-color: rgba($color: #000, $alpha: 0.6);
+  }
+
+ 
+
+  &__blackfriday {
+    background: #151515;
+  }
+
+  &__text {
+    width: 50%;
+    margin: auto;
+    padding: 160px; 
+    color: #ffffff;
+
+    h2 {
+      font-size: 48px;
+      font-weight: 600; 
+      width: 600px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      width: 500px;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 30px;
+    }
+  }
+  &__button__buy {
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 15px;
+    padding: 25px 10px;
+    margin-top: 15px;
+    width: 200px;
+  }
+
+  &__main__right:nth-last-child(4) {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 48px;
+    position: absolute;
+    z-index: 1;
+    top: 32%;
+    left: 7%;
+  }
+  &__main__right:nth-last-child(3) {
+    color: #ffffff; 
+    font-size: 48px;
+    font-weight: bold;
+    position: absolute;
+    z-index: 1;
+    top: 39%;
+    left: 7%;
+  }
+
+  &__main__right:nth-last-child(2) {
+    color: #ffffff;
+    font-size: 100px;
+    font-weight: bold;
+    width: 500px; 
+    position: absolute;
+    z-index: 1;
+    top: 48%;
+    left: 12%;
+  }
+  &__main__right:nth-last-child(1) {
+    color: #ffffff;
+    font-size: 100px;
+    font-weight: bold;
+    width: 500px; 
+    position: absolute;
+    z-index: 1;
+    top: 59%;
+    left: 12%;
+  }
+
+  &__options {
+    margin-top: 50px;
+    text-align: center;
+    margin-left: 50px;
+  }
+
+  &__options &__h2__left {
+    text-align: start;
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 60px;
+  }
+
+  &__informations img{
+    width: 830px;
+    height: 900px;
+    margin-left: 5px;
+  }
+
+  &__informations h2{
+    font-size: 48px;
+    margin-top: 30px;
+  }
+
+  &__informations p{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 40px;
+  }
+
+  &__informations button{
+    color: #ffffff;
+    background: #151515;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    padding: 25px 10px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    width: 200px;
+  }
+
+  &__images {
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+  }
+}
+/* Responsividade */
+@media screen and (max-width: 1024px) {
+    .element__feminine__blackfriday {
+      flex-direction: column;
+    }
+  
+    .element__feminine__welcome__img {
+      width: 100%;
+    }
+
+    .element__feminine__options {
+        margin-top: 550px;
+    
+
+        .element__feminine__h2__left {
+            margin: auto 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+    
+    .element__feminine__informations {
+        width: 100%;
+        margin-bottom: 200px;
+
+        h2{
+            font-size: 32px;
+        }
+
+        .element__feminine__images {
+            width: 300px;
+            flex-wrap: wrap;
+            margin: auto;
+        }
+
+        .block{
+            display: none;
+        }
+
+    }
+  }
+
+@media screen and (max-width: 425px) {
+    .element__feminine__text {
+        width: auto;
+
+        h2,
+        p {
+            width: auto;
+        }
+
+        h2{
+            font-size: 28px;
+        }
+
+        p{
+            font-size: 14px;
+        }
+
+        .element__feminine__button__buy {
+            width: 180px;
+        }
+    }
+    
+      .element__feminine__welcome__img {
+        display: none;
+      }
+  
+      .element__feminine__options {
+         margin: auto;
+
+          .element__feminine__h2__left {
+              margin: auto 0;
+              text-align: center;
+              margin-bottom: 10px;
+              margin-top: 100px;
+          }
+      }
+      
+      .element__feminine__informations {
+          width: 100%;
+          margin-bottom: 100px;
+  
+          h2{
+              font-size: 24px;
+              
+          }
+
+          p{
+            font-size: 12px;
+          }
+  
+          .element__feminine__images {
+              width: 300px;
+             
+          }
+  
+          
+  
+      }
+  }

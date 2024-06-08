@@ -1,0 +1,36 @@
+<nav class="element__navbar">
+  <div class="element__navbar__title">
+    <a routerLink="/home">
+      <img src="../../../assets/icons/shoe.svg">
+      <h4>GEF Shoes</h4>
+    </a>
+    
+  </div>
+
+  <div class="element__navbar__categories">
+    <a routerLink="/feminino" target="_blank"><b>Feminino</b></a>
+    <a routerLink="/masculino" target="_blank"><b>Masculino</b></a>
+    <a routerLink="/infantil" target="_blank"><b>Infantil</b></a>
+    <a class="element__navbar__categories__esporte" [routerLink]="['/esportes']" target="_blank">Esportes</a>
+    <a class="element__navbar__categories__mundogef" [routerLink]="['/mundogef']" target="_blank">Mundo GEF</a>
+  </div>
+
+  <div class="element__navbar__search">
+    <input placeholder="Pesquisar" />
+    <button>
+      <mat-icon>search</mat-icon>
+    </button>
+  </div>
+
+  <div class="element__navbar__buttons">
+    <button (click)="login()" target="_blank">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <button (click)="favorites()" target="_blank">
+      <mat-icon>favorite_border</mat-icon>
+    </button>
+    <button (click)="shoppingCart()" target="_blank">
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
+  </div>
+</nav>

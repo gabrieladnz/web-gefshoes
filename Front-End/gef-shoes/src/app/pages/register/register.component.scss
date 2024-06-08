@@ -1,0 +1,93 @@
+.page__register {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  height: 80%;
+
+  &__title {
+    animation: slide 1.2s linear;
+
+    padding: 50px;
+    text-align: center;
+
+    h1 {
+      font-size: 40px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 0;
+    }
+  }
+
+
+  &__form {
+    animation: slideToLoad 1s linear;
+
+    min-width: 500px;
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__form__items {}
+
+  &__form__button {
+    margin-top: 15px;
+    border-radius: 50px;
+    padding: 20px 50px 20px 50px;
+    width: 250px;
+  }
+
+  &__error-message {
+    color: red;
+    font-weight: 500;
+    margin-top: 10px;
+
+  }
+}
+
+/* Efeitos */
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideToLoad {
+  0% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsividade */
+@media screen and (max-width: 425px) {
+  .page__register__form {
+    min-width: 90%;
+  }
+
+  .page__register__form__button {
+    width: 90%;
+  }
+}
+
+::ng-deep .mat-mdc-raised-button:not(:disabled) {
+  color: #ffffff !important;
+  background-color: #252525 !important;
+}

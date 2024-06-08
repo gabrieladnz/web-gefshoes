@@ -1,0 +1,65 @@
+.element__footer {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 20px;
+  color: #FFFFFF;
+  background-color: #121214;
+
+  a {
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+    font-size: 14px;
+  }
+
+  h4 {
+    font-weight: 500;
+  }
+
+  &__institutional,
+  &__informations,
+  &__colections,
+  &__help,
+  &__social__media {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__institutional {}
+
+  &__informations {}
+
+  &__colections {}
+
+  &__help {}
+
+  &__social__media {}
+}
+
+@media screen and (max-width: 425px) {
+  .element__footer {
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .element__footer {
+
+    h4 {
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    &__institutional,
+    &__informations,
+    &__colections,
+    &__help,
+    &__social__media {
+      margin-right: 5px;
+    }
+
+    &__institutional {
+      margin-left: 5px;
+    }
+  }
+}

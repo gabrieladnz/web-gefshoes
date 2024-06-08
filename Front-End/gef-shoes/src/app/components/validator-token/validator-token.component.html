@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+<section class="validar-token__section">
+  <div class="validar-token__body">
+    <h2 class="validar-token__titulo">Insira seu token no campo abaixo:</h2>
+    <div class="validar-token__input">
+      <form [formGroup]="tokenForm">
+        <input type="text" formControlName="token">
+      </form>
+      <button mat-raised-button type="submit" (click)="validatorToken()">Validar</button>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

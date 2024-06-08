@@ -1,0 +1,126 @@
+.element__navbar {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FCFCFC;
+  color: black;
+
+  a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      margin-right: 10px;
+    }
+
+    h4 {
+      font-weight: 500;
+      margin: 0;
+    }
+  }
+
+  &__categories {
+    a {
+      margin-right: 15px;
+      font-size: 15px;
+
+    }
+  }
+
+  &__search {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    input {
+      font-size: 15px;
+      padding: 6px;
+      border-radius: 10px;
+      padding-right: 30px;
+      background-color: rgba(231, 230, 230, 0.74);
+      border: none;
+      outline: none;
+    }
+
+    button {
+      position: absolute;
+      right: 5px;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+
+  &__buttons {
+
+    button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+}
+
+/* Efeitos */
+.element__navbar__categories,
+.element__navbar__buttons {
+
+  a,
+  button {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+}
+
+
+/* Responsividade */
+@media screen and (max-width: 770px) {
+  .element__navbar__categories {
+
+    &__esporte,
+    &__mundogef {
+        display: none !important;
+    }
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .element__navbar__categories {
+    display: none;
+  }
+
+  .element__navbar__search {
+    input {
+      width: 100px;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .element__navbar__title {
+    h4 {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .element__navbar__search {
+    display: none;
+  }
+}
